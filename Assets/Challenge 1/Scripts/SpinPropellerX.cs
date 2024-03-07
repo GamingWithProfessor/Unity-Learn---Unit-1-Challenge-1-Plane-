@@ -1,21 +1,19 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayerX : MonoBehaviour
+public class SpinPropellerX : MonoBehaviour
 {
-    public GameObject plane;
-    public Vector3 offset;
-
+    public float rotationspeed = 5.0f;
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = plane.transform.position + offset;
+        transform.Rotate(Vector3.forward * Time.deltaTime * rotationspeed *10);
     }
 }
